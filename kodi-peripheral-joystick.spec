@@ -4,7 +4,7 @@
 
 Name:           kodi-peripheral-joystick
 Version:        1.3.2
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 Group:          Applications/Multimedia
@@ -17,6 +17,8 @@ BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  kodi-platform-devel >= %{kodi_platform_version}
 BuildRequires:  platform-devel
+BuildRequires:  pcre-devel
+BuildRequires:  systemd-devel
 Requires:       kodi >= %{kodi_version}
 ExclusiveArch:  i686 x86_64
 
@@ -43,6 +45,9 @@ Joystick Peripheral Addon for Kodi
 
 
 %changelog
+* Tue Oct 24 2017 Wade Berrier <wberrier@gmail.com> - 1.3.2-3
+- add additional BuildRequires: pcre-devel systemd-devel
+
 * Sat Sep 16 2017 Wade Berrier <wberrier@gmail.com> - 1:1.3.2-2
 - Minor cleanups from package submission code review
 
