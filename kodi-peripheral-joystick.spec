@@ -4,7 +4,7 @@
 
 Name:           kodi-peripheral-joystick
 Version:        1.3.2
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 Group:          Applications/Multimedia
@@ -45,6 +45,9 @@ Joystick Peripheral Addon for Kodi
 
 
 %changelog
+* Thu Mar 01 2018 RPM Fusion Release Engineering <leigh123linux@googlemail.com> - 1.3.2-4
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_28_Mass_Rebuild
+
 * Tue Oct 24 2017 Wade Berrier <wberrier@gmail.com> - 1.3.2-3
 - add additional BuildRequires: pcre-devel systemd-devel
 
