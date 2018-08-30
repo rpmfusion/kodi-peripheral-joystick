@@ -1,37 +1,38 @@
 %global kodi_addon peripheral.joystick
-%global kodi_version 17.4
-%global kodi_platform_version 17.0
+%global kodi_version 18.0
+%global kodi_platform_version 18.0
 
 Name:           kodi-peripheral-joystick
-Version:        1.3.2
-Release:        5%{?dist}
+Version:        1.4.6
+Release:        1%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 Group:          Applications/Multimedia
 License:        GPLv2+
 URL:            https://github.com/xbmc/%{kodi_addon}/
-Source0:        %{url}/archive/%{kodi_addon}-%{version}.tar.gz
+Source0:        %{url}/archive/v%{version}/%{kodi_addon}-%{version}.tar.gz
 
 BuildRequires:  cmake
 BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  kodi-platform-devel >= %{kodi_platform_version}
+BuildRequires:  pkgconfig(libpcrecpp)
+BuildRequires:  pkgconfig(libudev)
+BuildRequires:  pkgconfig(sdl2)
 BuildRequires:  platform-devel
-BuildRequires:  pcre-devel
-BuildRequires:  systemd-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64
+ExclusiveArch:  i686 x86_64 aarch64
 
 %description
 Joystick Peripheral Addon for Kodi
 
 
 %prep
-%autosetup -n %{kodi_addon}-%{version} -p0
+%autosetup -n %{kodi_addon}-%{version}
 
 
 %build
-%cmake -DCMAKE_INSTALL_LIBDIR=%{_libdir}/kodi/ .
+%cmake -DSTEAMLINK=1
 %make_build
 
 
@@ -40,11 +41,16 @@ Joystick Peripheral Addon for Kodi
 
 
 %files
+%doc Readme.md
 %{_libdir}/kodi/addons/%{kodi_addon}/
 %{_datadir}/kodi/addons/%{kodi_addon}/
 
 
 %changelog
+* Thu Aug 30 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.4.6-1
+- Update to 1.4.6
+- Enable aarch64 build
+
 * Thu Jul 26 2018 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.3.2-5
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_29_Mass_Rebuild
 
