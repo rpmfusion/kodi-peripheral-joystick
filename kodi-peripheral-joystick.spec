@@ -4,7 +4,7 @@
 
 Name:           kodi-peripheral-joystick
 Version:        1.4.6
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 Group:          Applications/Multimedia
@@ -21,7 +21,7 @@ BuildRequires:  pkgconfig(libudev)
 BuildRequires:  pkgconfig(sdl2)
 BuildRequires:  platform-devel
 Requires:       kodi >= %{kodi_version}
-ExclusiveArch:  i686 x86_64 aarch64
+ExcludeArch:    %{power64} ppc64le
 
 %description
 Joystick Peripheral Addon for Kodi
@@ -47,6 +47,9 @@ Joystick Peripheral Addon for Kodi
 
 
 %changelog
+* Mon Oct 15 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.4.6-2
+- Enable arm build
+
 * Thu Aug 30 2018 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.4.6-1
 - Update to 1.4.6
 - Enable aarch64 build
