@@ -2,6 +2,8 @@
 %global kodi_codename Leia
 %global kodi_version 18.0
 
+%undefine __cmake_in_source_build
+
 Name:           kodi-peripheral-joystick
 Version:        1.4.8
 Release:        2%{?dist}
@@ -11,7 +13,7 @@ License:        GPLv2+
 URL:            https://github.com/xbmc/%{kodi_addon}/
 Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{version}.tar.gz
 
-BuildRequires:  cmake
+BuildRequires:  cmake3
 BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(libudev)
@@ -28,12 +30,12 @@ Joystick Peripheral Addon for Kodi.
 
 
 %build
-%cmake
-%make_build
+%cmake3
+%cmake3_build
 
 
 %install
-%make_install
+%cmake3_install
 
 
 %files
