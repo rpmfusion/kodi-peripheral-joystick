@@ -1,12 +1,10 @@
 %global kodi_addon peripheral.joystick
-%global kodi_codename Leia
-%global kodi_version 18.0
-
-%undefine __cmake_in_source_build
+%global kodi_codename Matrix
+%global kodi_version 19.0
 
 Name:           kodi-peripheral-joystick
-Version:        1.4.8
-Release:        3%{?dist}
+Version:        1.6.0
+Release:        1%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 License:        GPLv2+
@@ -39,12 +37,16 @@ Joystick Peripheral Addon for Kodi.
 
 
 %files
-%doc Readme.md
+%doc README.md docs/CONTRIBUTING.md
+%license LICENSE.md
 %{_libdir}/kodi/addons/%{kodi_addon}/
 %{_datadir}/kodi/addons/%{kodi_addon}/
 
 
 %changelog
+* Wed Aug 19 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.6.0-1
+- Update to 1.6.0 (switch to Matrix branch)
+
 * Tue Aug 18 2020 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.4.8-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_33_Mass_Rebuild
 
