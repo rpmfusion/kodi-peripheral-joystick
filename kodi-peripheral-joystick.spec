@@ -3,7 +3,7 @@
 %global kodi_version 19.0
 
 Name:           kodi-peripheral-joystick
-Version:        1.6.0
+Version:        1.7.1
 Release:        1%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
@@ -44,6 +44,9 @@ Joystick Peripheral Addon for Kodi.
 
 
 %changelog
+* Mon Nov 16 21:25:57 CET 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.7.1-1
+- Update to 1.7.1
+
 * Wed Aug 19 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.6.0-1
 - Update to 1.6.0 (switch to Matrix branch)
 
