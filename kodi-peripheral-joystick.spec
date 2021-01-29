@@ -4,7 +4,7 @@
 
 Name:           kodi-peripheral-joystick
 Version:        1.7.1
-Release:        1%{?dist}
+Release:        2%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 License:        GPLv2+
@@ -15,7 +15,7 @@ BuildRequires:  cmake3
 BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  pkgconfig(libudev)
-BuildRequires:  tinyxml-devel
+BuildRequires:  pkgconfig(tinyxml)
 Requires:       kodi >= %{kodi_version}
 ExcludeArch:    %{power64} ppc64le
 
@@ -44,7 +44,10 @@ Joystick Peripheral Addon for Kodi.
 
 
 %changelog
-* Mon Nov 16 21:25:57 CET 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.7.1-1
+* Fri Jan 29 2021 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.7.1-2
+- Rebuild for Kodi 19 RC1
+
+* Mon Nov 16 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.7.1-1
 - Update to 1.7.1
 
 * Wed Aug 19 2020 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.6.0-1
