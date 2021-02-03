@@ -4,7 +4,7 @@
 
 Name:           kodi-peripheral-joystick
 Version:        1.7.1
-Release:        2%{?dist}
+Release:        3%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 License:        GPLv2+
@@ -44,6 +44,9 @@ Joystick Peripheral Addon for Kodi.
 
 
 %changelog
+* Wed Feb 03 2021 RPM Fusion Release Engineering <leigh123linux@gmail.com> - 1.7.1-3
+- Rebuilt for https://fedoraproject.org/wiki/Fedora_34_Mass_Rebuild
+
 * Fri Jan 29 2021 Mohamed El Morabity <melmorabity@fedoraproject.org> - 1.7.1-2
 - Rebuild for Kodi 19 RC1
 
