@@ -3,7 +3,7 @@
 %global kodi_version 20
 
 Name:           kodi-peripheral-joystick
-Version:        20.1.3
+Version:        20.1.8
 Release:        1%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
@@ -54,6 +54,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Mon Mar 27 2023 Mohamed El Morabity <melmorabity@fedoraproject.org> - 20.1.8-1
+- Update to 20.1.8
+
 * Sun Jan 29 2023 Mohamed El Morabity <melmorabity@fedoraproject.org> - 20.1.3-1
 - Update to 20.1.3
 - Add AppStream metadata
