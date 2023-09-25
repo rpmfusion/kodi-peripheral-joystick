@@ -3,8 +3,8 @@
 %global kodi_version 20
 
 Name:           kodi-peripheral-joystick
-Version:        20.1.8
-Release:        2%{?dist}
+Version:        20.1.13
+Release:        1%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 License:        GPL-2.0-or-later
@@ -54,6 +54,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Mon Sep 25 2023 Mohamed El Morabity <melmorabity@fedoraproject.org> - 20.1.13-1
+- Update to 20.1.13
+
 * Wed Aug 02 2023 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 20.1.8-2
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_39_Mass_Rebuild
 
