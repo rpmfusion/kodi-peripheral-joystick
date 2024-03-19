@@ -1,15 +1,15 @@
 %global kodi_addon peripheral.joystick
-%global kodi_codename Nexus
-%global kodi_version 20
+%global kodi_codename Omega
+%global kodi_version 21
 
 Name:           kodi-peripheral-joystick
-Version:        20.1.15
+Version:        21.1.11
 Release:        1%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 License:        GPL-2.0-or-later
 URL:            https://github.com/xbmc/%{kodi_addon}/
-Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{version}.tar.gz
+Source0:        %{url}/archive/%{version}-%{kodi_codename}/%{kodi_addon}-%{version}-%{kodi_codename}.tar.gz
 Source1:        %{name}.metainfo.xml
 
 BuildRequires:  cmake
@@ -54,6 +54,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Mon Mar 18 2024 Michael Cronenworth <mike@cchtml.com> - 21.1.11-1
+- Update to 21.1.11
+
 * Sat Feb 17 2024 Leigh Scott <leigh123linux@gmail.com> - 20.1.15-1
 - Update to 20.1.15
 
