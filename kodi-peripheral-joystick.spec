@@ -4,7 +4,7 @@
 
 Name:           kodi-peripheral-joystick
 Version:        21.1.22
-Release:        3%{?dist}
+Release:        4%{?dist}
 Summary:        Joystick Peripheral addon for Kodi
 
 License:        GPL-2.0-or-later
@@ -54,6 +54,9 @@ appstream-util validate-relax --nonet $RPM_BUILD_ROOT%{_metainfodir}/%{name}.met
 
 
 %changelog
+* Tue Jun 30 2026 Leigh Scott <leigh123linux@gmail.com> - 21.1.22-4
+- Update for kodi 22
+
 * Mon Feb 02 2026 RPM Fusion Release Engineering <sergiomb@rpmfusion.org> - 21.1.22-3
 - Rebuilt for https://fedoraproject.org/wiki/Fedora_44_Mass_Rebuild
 
