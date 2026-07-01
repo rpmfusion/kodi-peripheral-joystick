@@ -17,7 +17,7 @@ BuildRequires:  gcc-c++
 BuildRequires:  kodi-devel >= %{kodi_version}
 BuildRequires:  libappstream-glib
 BuildRequires:  pkgconfig(libudev)
-BuildRequires:  pkgconfig(tinyxml)
+BuildRequires:  pkgconfig(tinyxml2)
 Requires:       kodi >= %{kodi_version}
 ExcludeArch:    %{power64}
 
